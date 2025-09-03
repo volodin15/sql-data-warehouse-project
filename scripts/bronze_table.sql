@@ -19,9 +19,9 @@ DROP TABLE IF EXISTS bronze.crm_prd_info;
 CREATE TABLE bronze.crm_prd_info(
 	prd_id integer,
 	prd_key varchar(50),
-	prd_nm integer,
+	prd_nm varchar(50),
 	prd_cost integer,
-	prd_line integer,
+	prd_line varchar(50),
 	prd_start_dt date,
 	prd_end_dt date
 );
@@ -29,12 +29,12 @@ CREATE TABLE bronze.crm_prd_info(
 
 DROP TABLE IF EXISTS bronze.crm_sales_details;
 CREATE TABLE bronze.crm_sales_details(
-	sls_ord_num integer,
+	sls_ord_num varchar(50),
 	sls_prd_key varchar(50),
 	sls_cust_id integer,
-	sls_order_dt date,
-	sls_ship_dt date,
-	sls_due_dt date,
+	sls_order_dt varchar(50),
+	sls_ship_dt varchar(50),
+	sls_due_dt varchar(50),
 	sls_sales integer,
 	sls_quantity integer,
 	sls_price integer
@@ -47,8 +47,8 @@ CREATE TABLE bronze.erp_cust_az12(
 	gen varchar(50)
 );
 
-DROP TABLE IF EXISTS bronze.erp_lock_a101;
-CREATE TABLE bronze.erp_lock_a101(
+DROP TABLE IF EXISTS bronze.erp_loc_a101;
+CREATE TABLE bronze.erp_loc_a101(
 	cid varchar(50),
 	cntry varchar(50)
 );
@@ -60,6 +60,7 @@ CREATE TABLE bronze.erp_px_cat_g1v2(
 	subcat varchar(50),
 	maintenance varchar(50)
 );
+
 
 
 
