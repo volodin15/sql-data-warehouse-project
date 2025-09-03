@@ -14,9 +14,9 @@ BEGIN
 	WITH (FORMAT csv, HEADER);
 	
 	-- check if data in columns is ok
-	SELECT * FROM bronze.crm_cust_info;
+	--SELECT * FROM bronze.crm_cust_info;
 	-- check if all rows are in table
-	SELECT count(*) FROM bronze.crm_cust_info;
+	--SELECT count(*) FROM bronze.crm_cust_info;
 	
 	---
 	
@@ -27,9 +27,9 @@ BEGIN
 	WITH (FORMAT csv, HEADER);
 	
 	-- check if data in columns is ok
-	SELECT * FROM bronze.crm_prd_info;
+	--SELECT * FROM bronze.crm_prd_info;
 	-- check if all rows are in table
-	SELECT count(*) FROM bronze.crm_prd_info;
+	--SELECT count(*) FROM bronze.crm_prd_info;
 	
 	---
 	TRUNCATE TABLE bronze.crm_sales_details;
@@ -39,9 +39,9 @@ BEGIN
 	WITH (FORMAT csv, HEADER);
 	
 	-- check if data in columns is ok
-	SELECT * FROM bronze.crm_sales_details;
+	--SELECT * FROM bronze.crm_sales_details;
 	-- check if all rows are in table
-	SELECT count(*) FROM bronze.crm_sales_details;
+	--SELECT count(*) FROM bronze.crm_sales_details;
 	
 	---
 	
@@ -52,9 +52,9 @@ BEGIN
 	WITH (FORMAT csv, HEADER);
 	
 	-- check if data in columns is ok
-	SELECT * FROM bronze.erp_cust_az12;
+	--SELECT * FROM bronze.erp_cust_az12;
 	-- check if all rows are in table
-	SELECT count(*) FROM bronze.erp_cust_az12;
+	--SELECT count(*) FROM bronze.erp_cust_az12;
 	
 	---
 	TRUNCATE TABLE bronze.erp_loc_a101;
@@ -64,9 +64,9 @@ BEGIN
 	WITH (FORMAT csv, HEADER);
 	
 	-- check if data in columns is ok
-	SELECT * FROM bronze.erp_loc_a101;
+	--SELECT * FROM bronze.erp_loc_a101;
 	-- check if all rows are in table
-	SELECT count(*) FROM bronze.erp_loc_a101;
+	--SELECT count(*) FROM bronze.erp_loc_a101;
 	
 	---
 	TRUNCATE TABLE bronze.erp_px_cat_g1v2;
@@ -76,12 +76,14 @@ BEGIN
 	WITH (FORMAT csv, HEADER);
 	
 	-- check if data in columns is ok
-	SELECT * FROM bronze.erp_px_cat_g1v2;
+	--SELECT * FROM bronze.erp_px_cat_g1v2;
 	-- check if all rows are in table
-	SELECT count(*) FROM bronze.erp_px_cat_g1v2;
+	--SELECT count(*) FROM bronze.erp_px_cat_g1v2;
 
 END;
 $$;
+
+call bronze.load_bronze();
 
 
 
