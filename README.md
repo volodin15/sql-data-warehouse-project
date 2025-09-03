@@ -6,6 +6,8 @@
   - **Silver Layer** – очищені та нормалізовані дані.
   - **Gold Layer** – агреговані та готові до аналітики дані.
 
+<img width="1289" height="829" alt="image" src="https://github.com/user-attachments/assets/4a9b0b4e-303c-4a7b-bd7e-4b8bf603d93d" />
+
 ---
 
 ## 🔄 ETL Pipelines / ETL Конвеєри
