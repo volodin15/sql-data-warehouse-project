@@ -12,7 +12,8 @@ CREATE TABLE silver.crm_cust_info(
 	cst_lastname varchar(50),
 	cst_marital_status varchar(50),
 	cst_gndr varchar(50),
-	cst_create_date date
+	cst_create_date date,
+	dwh_create_date timestamp DEFAULT now()
 );
 
 DROP TABLE IF EXISTS silver.crm_prd_info;
@@ -23,7 +24,8 @@ CREATE TABLE silver.crm_prd_info(
 	prd_cost integer,
 	prd_line varchar(50),
 	prd_start_dt date,
-	prd_end_dt date
+	prd_end_dt date,
+	dwh_create_date timestamp DEFAULT now()
 );
 
 
@@ -37,20 +39,24 @@ CREATE TABLE silver.crm_sales_details(
 	sls_due_dt date,
 	sls_sales integer,
 	sls_quantity integer,
-	sls_price integer
+	sls_price integer,
+	dwh_create_date timestamp DEFAULT now()
+	
 );
 
 DROP TABLE IF EXISTS silver.erp_cust_az12;
 CREATE TABLE silver.erp_cust_az12(
 	cid varchar(50),
 	bdate date,
-	gen varchar(50)
+	gen varchar(50),
+	dwh_create_date timestamp DEFAULT now()
 );
 
 DROP TABLE IF EXISTS silver.erp_loc_a101;
 CREATE TABLE silver.erp_loc_a101(
 	cid varchar(50),
-	cntry varchar(50)
+	cntry varchar(50),
+	dwh_create_date timestamp DEFAULT now()
 );
 
 DROP TABLE IF EXISTS silver.erp_px_cat_g1v2;
@@ -58,5 +64,6 @@ CREATE TABLE silver.erp_px_cat_g1v2(
 	id varchar(50),
 	cat varchar(50),
 	subcat varchar(50),
-	maintenance varchar(50)
+	maintenance varchar(50),
+	dwh_create_date timestamp DEFAULT now()
 );
